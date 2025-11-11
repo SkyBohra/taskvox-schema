@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { CallingModel, VoiceType, VoiceSource, VoiceGender, RegionCode } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, RegionCode, TaskVoxModel } from '../enums/user-enums';
 
 
 export type ClientVoiceGalleryDocument = ClientVoiceGallery & Document;
@@ -17,8 +17,8 @@ export class ClientVoiceGallery {
     @Prop({ required: true, type: Types.ObjectId, ref: 'VoiceGallery' })
     voiceGalleryId!: Types.ObjectId;
 
-    @Prop({ required: true, enum: CallingModel, default: CallingModel.DEFAULT })
-    callingModel!: CallingModel;
+    @Prop({ required: true, enum: TaskVoxModel, default: TaskVoxModel.Model2 })
+    model!: TaskVoxModel;
 
     @Prop({ required: true, type: Types.ObjectId, ref: 'User' })
     userId!: Types.ObjectId;

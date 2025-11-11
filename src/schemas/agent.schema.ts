@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-import { EndBehavior, ModelType, InitialOutputMedium, AgentType, RegionCode } from '../enums/user-enums';
+import { EndBehavior, ModelType, InitialOutputMedium, RegionCode, TaskVoxModel } from '../enums/user-enums';
 
 export type AgentDocument = Agent & Document;
 
@@ -166,13 +166,7 @@ export class Agent {
   @Prop({ type: String, default: '', maxlength: 500 })
   description!: string;
 
-  @Prop({
-    type: String,
-    enum: Object.values(AgentType),
-    required: true,
-    index: true,
-  })
-  type!: AgentType;
+
 
   @Prop({ type: Types.ObjectId, required: true, index: true })
   voiceDbId!: Types.ObjectId;
@@ -180,8 +174,12 @@ export class Agent {
   @Prop({ type: String, required: true, trim: true })
   voiceName!: string;
 
-  @Prop({ type: String, required: true })
-  callingModel!: string;
+  @Prop({
+    type: String,
+    enum: Object.values(TaskVoxModel),
+    required: true,
+  })
+  agentModel!: TaskVoxModel;
 
   @Prop({ type: String, required: true })
   displayVoiceName!: string;

@@ -1,7 +1,7 @@
 // src/interfaces/user.interface.ts
 
 import { Document } from 'mongoose';
-import { CompanyName, Role, CallingModel } from '../enums/user-enums';
+import { Role, TaskVoxModel } from '../enums/user-enums';
 
 /**
  * IUser: UserDocument का टाइप सेफ़ इंटरफ़ेस
@@ -15,7 +15,7 @@ export interface IUser extends Document {
     companyName: string;
     role: Role;
     tenantID: string;
-    defaultModel: CallingModel;
+    defaultModel: TaskVoxModel;
     refreshToken: string | null;
 
     /**

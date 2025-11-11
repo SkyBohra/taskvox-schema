@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { CorpusStatus, CorpusType } from '../enums/user-enums';
+import { CorpusStatus, TaskVoxModel } from '../enums/user-enums';
 
 export type CorpusDocument = Corpus & Document;
 
@@ -56,10 +56,10 @@ export class Corpus {
 
     @Prop({
         type: String,
-        enum: CorpusType,
-        default: CorpusType.taskvoxaiModel2,
+        enum: TaskVoxModel,
+        default: TaskVoxModel.Model2,
     })
-    type!: CorpusType;
+    model!: TaskVoxModel;
 }
 
 export const CorpusSchema = SchemaFactory.createForClass(Corpus);

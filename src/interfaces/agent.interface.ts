@@ -1,4 +1,4 @@
-import { AgentType, EndBehavior, ModelType, InitialOutputMedium, RegionCode } from '../enums/user-enums';
+import { EndBehavior, ModelType, InitialOutputMedium, RegionCode, TaskVoxModel } from '../enums/user-enums';
 import { Types } from 'mongoose';
 
 export interface IInactivityMessage {
@@ -66,10 +66,9 @@ export interface IAgent {
         agentId: string;
         description?: string;
         webhookId?: string;
-        type: AgentType;
         voiceDbId: Types.ObjectId;
         voiceName: string;
-        callingModel: string;
+        agentModel: TaskVoxModel;
         displayVoiceName: string;
         regionCode: RegionCode;
         agentCreatedAt?: Date;

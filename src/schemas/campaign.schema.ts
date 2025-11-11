@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType, CampaignMode, ChannelType } from '../enums/user-enums';
+import { VoiceType, VoiceSource, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType, CampaignMode, ChannelType, TaskVoxModel } from '../enums/user-enums';
 
 
 export type CampaignDocument = Campaign & Document;
@@ -31,8 +31,8 @@ export class Campaign {
     @Prop({ required: true, enum: VoiceSource })
     voiceSource!: VoiceSource;
 
-    @Prop({ required: true, enum: CallingModel, default: CallingModel.DEFAULT })
-    callingModel!: CallingModel;
+    @Prop({ required: true, enum: TaskVoxModel, default: TaskVoxModel.Model2 })
+    model!: TaskVoxModel;
 
     @Prop({ required: true, enum: CampaignMode, default: CampaignMode.NORMAL })
     campaignMode!: CampaignMode;

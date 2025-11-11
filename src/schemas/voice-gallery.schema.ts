@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
-import { VoiceType, VoiceSource, VoiceGender, CallingModel, RegionCode } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, RegionCode, TaskVoxModel } from '../enums/user-enums';
 
 
 export type VoiceGalleryDocument = VoiceGallery & Document;
@@ -26,8 +26,8 @@ export class VoiceGallery {
     @Prop({ required: true, enum: VoiceGender })
     voiceGender?: VoiceGender;
 
-    @Prop({ required: true, enum: CallingModel, default: CallingModel.DEFAULT })
-    callingModel!: CallingModel;
+    @Prop({ required: true, enum: TaskVoxModel, default: TaskVoxModel.Model2 })
+    model!: TaskVoxModel;
 
     @Prop()
     voiceName?: string;  // Required if source is Azure

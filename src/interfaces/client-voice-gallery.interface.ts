@@ -1,12 +1,12 @@
 // src/interfaces/client-voice-gallery.interface.ts
 
 import { Document, Types } from 'mongoose';
-import { CallingModel, VoiceType, VoiceSource, VoiceGender, RegionCode } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, RegionCode, TaskVoxModel } from '../enums/user-enums';
 
 export interface IClientVoiceGallery {
     _id: Types.ObjectId;
     voiceGalleryId: Types.ObjectId;
-    callingModel: CallingModel;
+    model: TaskVoxModel;
     userId: Types.ObjectId;
     tenantID: string;
     displayAgentName: string;

@@ -1,4 +1,5 @@
-import { CorpusStatus, CorpusType } from "../enums/user-enums";
+import { Model } from "mongoose";
+import { CorpusStatus, TaskVoxModel } from "../enums/user-enums";
 
 
 export interface ICorpusStats {
@@ -16,5 +17,5 @@ export interface ICorpus {
     created: Date;
     stats: ICorpusStats;
     isCreatedBytaskvoxai: boolean;
-    type: CorpusType; // Added type field to distinguish from other schemas
+    model: TaskVoxModel; // Added type field to distinguish from other schemas
 }

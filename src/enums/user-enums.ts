@@ -1,6 +1,16 @@
 // src/common/enum.ts
 
 
+export enum CompanyName {
+    HAVISTO_TEA = 'HAVISTO_TEA',
+    LETS_VENTURE = 'LETS_VENTURE',
+    MYRIADAI = 'MYRIADAI',
+    CLEARTAX = 'CLEARTAX',
+    GOVERNMENT_OF_KARNATAKA = 'GOVERNMENT_OF_KARNATAKA', // Descriptive key
+    WEEKDAY = 'WEEKDAY',
+    CASHBOOK = 'CASHBOOK',
+
+}
 
 export enum Role {
     SUPER_ADMIN = 'SuperAdmin',
@@ -9,11 +19,7 @@ export enum Role {
     GUEST = 'Guest',
 }
 
-export enum CorpusType {
-    TaskVox = 'TaskVox',
-    Ultravox = 'Ultravox',
-    ElevenLabs = 'ElevenLabs',
-}
+
 
 export enum CorpusSourceType {
     WEB = 'WEB',
@@ -170,11 +176,7 @@ export enum CampaignStatus {
     STOPPED = 'Stopped',         // New status added
 }
 
-export enum CallingModel {
-    DEFAULT = 'TaskVox_V1',
-    TaskVox_V1 = "TaskVox_V1",
-    TaskVox_V2 = 'TaskVox_V2',
-}
+
 
 
 
@@ -242,20 +244,8 @@ export enum CreditDeductionStatus {
     Failed = 'failed',    // deduction threw an error
 }
 
-export enum AgentType {
-    // TYPE_1 IS FOR taskvox SELF AGENTS ONLY
-    TaskVox_AGENT_TYPE_1 = 'TaskVox_AGENT_TYPE_1',
 
-    //TYPE_2 IS FOR ULTRAVOX AGENT
-    TaskVox_AGENT_TYPE_2 = 'TaskVox_AGENT_TYPE_2',
-}
 
-export enum AgentToolsType {
-    //ultravox
-    AGENT_TOOLS_TYPE_1 = "AGENT_TOOLS_TYPE_1",
-    //custom
-    AGENT_TOOLS_TYPE_2 = "AGENT_TOOLS_TYPE_2",
-}
 
 export enum CorpusStatus {
     // Default/unknown state
