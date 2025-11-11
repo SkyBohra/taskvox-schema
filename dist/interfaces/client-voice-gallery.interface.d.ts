@@ -1,0 +1,28 @@
+import { Types } from 'mongoose';
+import { VoiceType, VoiceSource, VoiceGender, RegionCode, TaskVoxModel } from '../enums/user-enums';
+export interface IClientVoiceGallery {
+    _id: Types.ObjectId;
+    voiceGalleryId: Types.ObjectId;
+    model: TaskVoxModel;
+    userId: Types.ObjectId;
+    tenantID: string;
+    displayAgentName: string;
+    type: VoiceType;
+    source: VoiceSource;
+    voiceId?: string;
+    voiceGender?: VoiceGender;
+    voiceName?: string;
+    fileUrl: string;
+    description: string;
+    isEnabled: boolean;
+    isCreditSufficient: boolean;
+    isDefault: boolean;
+    predefinedVoiceName: string;
+    createdAt: Date;
+    maxVoicesAllowed: number;
+    isVoicePermanentlyDisabled: boolean;
+    regionCode: RegionCode;
+    additionalMetadata?: Record<string, any>;
+    updatedAt: Date;
+}
+//# sourceMappingURL=client-voice-gallery.interface.d.ts.map
