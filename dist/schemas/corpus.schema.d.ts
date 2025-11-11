@@ -14,7 +14,7 @@ export declare class Corpus {
     externalCorpusId: string;
     created: Date;
     stats: CorpusStats;
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     model: TaskVoxModel;
 }
 export declare const CorpusSchema: import("mongoose").Schema<Corpus, import("mongoose").Model<Corpus, any, any, any, Document<unknown, any, Corpus, any> & Corpus & {

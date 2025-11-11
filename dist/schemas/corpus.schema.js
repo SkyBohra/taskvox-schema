@@ -70,7 +70,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
-], Corpus.prototype, "isCreatedBytaskvoxai", void 0);
+], Corpus.prototype, "isCreatedByTaskvox", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
         type: String,

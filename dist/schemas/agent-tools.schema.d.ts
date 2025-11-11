@@ -42,7 +42,7 @@ export declare class AgentTools {
     response: any;
     createdAt: Date;
     externalToolId: string;
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     created?: Date;
     ownership: string;
 }

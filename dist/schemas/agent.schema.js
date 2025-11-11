@@ -255,7 +255,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
-], Agent.prototype, "isCreatedBytaskvoxai", void 0);
+], Agent.prototype, "isCreatedByTaskvox", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: true }),
     __metadata("design:type", Boolean)

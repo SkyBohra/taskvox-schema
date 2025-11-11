@@ -65,7 +65,7 @@ export declare class Agent {
     webhookId: string;
     regionCode: RegionCode;
     agentCreatedAt: Date;
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     isLiveMode: boolean;
 }
 export declare const AgentSchema: import("mongoose").Schema<Agent, import("mongoose").Model<Agent, any, any, any, Document<unknown, any, Agent, any> & Agent & {

@@ -65,7 +65,7 @@ export interface IAgent {
     displayVoiceName: string;
     regionCode: RegionCode;
     agentCreatedAt?: Date;
-    isCreatedBytaskvoxai?: boolean;
+    isCreatedByTaskvox?: boolean;
     isLiveMode?: boolean;
 }
 //# sourceMappingURL=agent.interface.d.ts.map

@@ -167,7 +167,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
-], AgentTools.prototype, "isCreatedBytaskvoxai", void 0);
+], AgentTools.prototype, "isCreatedByTaskvox", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)

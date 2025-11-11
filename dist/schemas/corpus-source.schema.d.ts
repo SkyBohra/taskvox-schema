@@ -15,7 +15,7 @@ export declare class CorpusSource {
     webUrls: string[];
     documents: CorpusSubDocument[];
     createdAt: Date;
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     type: CorpusSourceType;
 }
 export declare const CorpusSourceSchema: import("mongoose").Schema<CorpusSource, import("mongoose").Model<CorpusSource, any, any, any, Document<unknown, any, CorpusSource, any> & CorpusSource & {

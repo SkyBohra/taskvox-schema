@@ -10,7 +10,7 @@ export interface ICorpusSource {
     crawlDepth: number;
     webUrls: string[];
     documents: CorpusSubDocument[];
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     type: CorpusSourceType;
 }
 //# sourceMappingURL=corpus-source.interface.d.ts.map

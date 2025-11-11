@@ -12,7 +12,7 @@ export interface ICorpus {
     externalCorpusId: string;
     created: Date;
     stats: ICorpusStats;
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     model: TaskVoxModel;
 }
 //# sourceMappingURL=corpus.interface.d.ts.map
