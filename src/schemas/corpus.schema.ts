@@ -52,7 +52,7 @@ export class Corpus {
     stats!: CorpusStats;
 
     @Prop({ type: Boolean, default: false })
-    isCreatedBytaskvoxai!: boolean;
+    isCreatedByTaskvox!: boolean;
 
     @Prop({
         type: String,

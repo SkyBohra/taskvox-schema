@@ -195,7 +195,7 @@ export class Agent {
   agentCreatedAt!: Date;
 
   @Prop({ type: Boolean, default: false })
-  isCreatedBytaskvoxai!: boolean;
+  isCreatedByTaskvox!: boolean;
 
   @Prop({ type: Boolean, default: true })
   isLiveMode!: boolean;

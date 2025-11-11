@@ -48,7 +48,7 @@ export interface IAgentTools {
   model: TaskVoxModel;
   response?: any;
   createdAt?: Date;
-  isCreatedBytaskvoxai: boolean;
+  isCreatedByTaskvox: boolean;
   externalToolId: string;
   created?: Date;
   ownership?: string;

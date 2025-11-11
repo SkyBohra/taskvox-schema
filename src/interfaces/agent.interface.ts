@@ -72,6 +72,6 @@ export interface IAgent {
         displayVoiceName: string;
         regionCode: RegionCode;
         agentCreatedAt?: Date;
-        isCreatedBytaskvoxai?: boolean;
+        isCreatedByTaskvox?: boolean;
         isLiveMode?: boolean;
 }

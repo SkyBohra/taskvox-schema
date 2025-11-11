@@ -123,7 +123,7 @@ export class AgentTools {
     externalToolId!: string;
 
     @Prop({ type: Boolean, default: false })
-    isCreatedBytaskvoxai!: boolean;
+    isCreatedByTaskvox!: boolean;
 
     @Prop()
     created?: Date;

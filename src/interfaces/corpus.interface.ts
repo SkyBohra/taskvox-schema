@@ -16,6 +16,6 @@ export interface ICorpus {
     externalCorpusId: string;        // updated from `externalCorpusId`
     created: Date;
     stats: ICorpusStats;
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     model: TaskVoxModel; // Added type field to distinguish from other schemas
 }

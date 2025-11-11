@@ -23,7 +23,7 @@ export interface WhatsappSetting {
 
 export interface TelephonyProviderSetting {
     enabled: boolean;
-    isCreatedBytaskvoxai: boolean;
+    isCreatedByTaskvox: boolean;
     apiKey: string | null;
     accountId: string | null;
     credits: number;
