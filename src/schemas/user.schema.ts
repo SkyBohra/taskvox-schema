@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
-import { CompanyName, Role, CallingModel } from '../enums/user-enums';
+import { Role, TaskVoxModel } from '../enums/user-enums';
 
 export type UserDocument = User & Document;
 
@@ -30,8 +30,8 @@ export class User {
     @Prop({ required: true })
     tenantID!: string;            // <-- ‘!’ added
 
-    @Prop({ type: String, required: true, enum: CallingModel, default: CallingModel.DEFAULT })
-    defaultModel!: CallingModel;  // <-- ‘!’ added
+    @Prop({ type: String, required: true, enum: TaskVoxModel, default: TaskVoxModel.Model2 })
+    defaultModel!: TaskVoxModel;  // <-- ‘!’ added
 
     @Prop({ type: String, default: null })
     refreshToken!: string | null;

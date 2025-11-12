@@ -87,7 +87,7 @@ export class ClientSetting {
                 credits: { type: Number, default: 0 },
                 phoneNumbers: { type: [String], default: [] },
                 humanAgentNumbers: { type: [String], default: [] },
-                isCreatedBytaskvoxai: { type: Boolean, default: false },
+                isCreatedByTaskvox: { type: Boolean, default: false },
             },
             twilio: {
                 enabled: { type: Boolean, default: false },
@@ -96,7 +96,7 @@ export class ClientSetting {
                 credits: { type: Number, default: 0 },
                 phoneNumbers: { type: [String], default: [] },
                 humanAgentNumbers: { type: [String], default: [] },
-                isCreatedBytaskvoxai: { type: Boolean, default: false },
+                isCreatedByTaskvox: { type: Boolean, default: false },
             },
             defaultProvider: {
                 type: String,

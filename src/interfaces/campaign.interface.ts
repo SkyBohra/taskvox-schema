@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CampaignType, CampaignStatus, VoiceSource, VoiceType, TelephonicProviders, RescheduleType, OngoingStatusSubType, CallingModel, ContactSourceType, CampaignMode, ChannelType } from '../enums/user-enums';
+import { CampaignType, CampaignStatus, VoiceSource, VoiceType, TelephonicProviders, RescheduleType, OngoingStatusSubType, ContactSourceType, CampaignMode, ChannelType, TaskVoxModel } from '../enums/user-enums';
 
 export interface ICampaign {
     _id: Types.ObjectId;
@@ -9,7 +9,7 @@ export interface ICampaign {
     contactSource: ContactSourceType; // Source of the contact (e.g., manual, webhook, etc.)
     totalContacts: number; // Total number of contacts
     voiceId: string; // ID of the selected voice
-    callingModel: CallingModel; // Calling model
+    model: TaskVoxModel; //  model
     voiceType: VoiceType; // Premium or Standard
     voiceSource: VoiceSource; // ElevenLabs or Azure
     userId: Types.ObjectId; // Reference to User

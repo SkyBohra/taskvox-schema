@@ -1,0 +1,56 @@
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
+import { VoiceType, VoiceSource, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType, CampaignMode, ChannelType, TaskVoxModel } from '../enums/user-enums';
+export type CampaignDocument = Campaign & Document;
+export declare class Campaign {
+    voiceGalleryId: Types.ObjectId;
+    clientVoiceGalleryId: Types.ObjectId;
+    totalContacts: number;
+    voiceId: string;
+    voiceType: VoiceType;
+    voiceSource: VoiceSource;
+    model: TaskVoxModel;
+    campaignMode: CampaignMode;
+    userId: Types.ObjectId;
+    displayVoiceName: string;
+    defaultVoiceNameOrId: string;
+    name: string;
+    tenantID: string;
+    type: CampaignType;
+    telephonicProvider: TelephonicProviders;
+    outboundPhoneNo: string;
+    humanAgentNumber: string;
+    isLiveMode: boolean;
+    startDate: string;
+    startTime: string;
+    endTime: string;
+    enableReattempts: boolean;
+    reattemptGap: number;
+    maxCallAttempts: number;
+    contactListId: Types.ObjectId;
+    workflowId: Types.ObjectId;
+    timezone: string;
+    status: CampaignStatus;
+    promptId: number;
+    contactSource: ContactSourceType;
+    webhookUrl?: string;
+    shiftedToNextDay: boolean;
+    nextScheduledDate?: Date;
+    reattemptDone: boolean;
+    ongoingStatus: OngoingStatusSubType;
+    callsMade: number;
+    callsAnswered: number;
+    meetingsScheduled: number;
+    followUpNeeded: number;
+    rescheduleType: RescheduleType;
+    rescheduleCount: number;
+    allowLateNightCalls: boolean;
+    /** ✅ New: channel for all campaigns */
+    channelType: ChannelType;
+    isEmailSend: boolean;
+    clientCutoffStart: string;
+    clientCutoffEnd: string;
+    agentId: Types.ObjectId;
+    createdAt: Date;
+}
+export declare const CampaignSchema: MongooseSchema<CampaignDocument, Model<CampaignDocument>>;
+//# sourceMappingURL=campaign.schema.d.ts.map

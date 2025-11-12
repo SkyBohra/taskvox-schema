@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { AgentToolsType, AgentType, CallingModel } from '../enums/user-enums';
+import { TaskVoxModel } from '../enums/user-enums';
 
 export interface IParameterSchema {
   description?: string;
@@ -45,11 +45,10 @@ export interface IAgentTools {
   name: string;
   definition: IDefinitionSchema;
   description?: string;
-  type: AgentToolsType;
-  callingModel: CallingModel;
+  model: TaskVoxModel;
   response?: any;
   createdAt?: Date;
-  isCreatedBytaskvoxai: boolean;
+  isCreatedByTaskvox: boolean;
   externalToolId: string;
   created?: Date;
   ownership?: string;

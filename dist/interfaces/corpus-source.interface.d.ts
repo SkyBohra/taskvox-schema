@@ -1,0 +1,16 @@
+import { Types } from "mongoose";
+import { CorpusSubDocument } from "../schemas";
+import { CorpusSourceType } from "../enums/user-enums";
+export interface ICorpusSource {
+    name: string;
+    description: string;
+    externalSourceId: string;
+    externalCorpusId: string;
+    corpusId: Types.ObjectId;
+    crawlDepth: number;
+    webUrls: string[];
+    documents: CorpusSubDocument[];
+    isCreatedByTaskvox: boolean;
+    type: CorpusSourceType;
+}
+//# sourceMappingURL=corpus-source.interface.d.ts.map

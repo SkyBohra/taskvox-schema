@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { AgentToolsType, AgentType, CallingModel } from '../enums/user-enums';
+import { Document, Schema as MongooseSchema, Model } from 'mongoose';
+import { Provider, TaskVoxModel } from '../enums/user-enums';
 
 export type AgentToolsDocument = AgentTools & Document;
 
@@ -107,12 +107,9 @@ export class AgentTools {
     @Prop({ default: '' })
     description!: string;
 
-    @Prop({ required: true })
-    type!: AgentToolsType;
-
 
     @Prop({ required: true })
-    callingModel!: CallingModel;
+    model!: TaskVoxModel;
 
 
 
@@ -126,7 +123,7 @@ export class AgentTools {
     externalToolId!: string;
 
     @Prop({ type: Boolean, default: false })
-    isCreatedBytaskvoxai!: boolean;
+    isCreatedByTaskvox!: boolean;
 
     @Prop()
     created?: Date;

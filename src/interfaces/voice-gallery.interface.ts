@@ -1,7 +1,7 @@
 // src/interfaces/voice-gallery.interface.ts
 
 import { Document } from 'mongoose';
-import { VoiceType, VoiceSource, VoiceGender, CallingModel, RegionCode } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, RegionCode, TaskVoxModel } from '../enums/user-enums';
 
 
 export interface IVoiceGallery {
@@ -9,7 +9,7 @@ export interface IVoiceGallery {
     source: VoiceSource;              // ElevenLabs or Azure
     voiceId?: string;                 // Required if source is ElevenLabs
     voiceGender?: VoiceGender;
-    callingModel: CallingModel;
+    model: TaskVoxModel;
     voiceName?: string;               // Required if source is Azure
     fileUrl: string;                  // The file URL for the voice asset
     description: string;              // A description for the voice

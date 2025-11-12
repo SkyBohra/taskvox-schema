@@ -44,7 +44,7 @@ export class CorpusSource {
     createdAt!: Date;
 
     @Prop({ type: Boolean, default: false })
-    isCreatedBytaskvoxai!: boolean;
+    isCreatedByTaskvox!: boolean;
 
     @Prop({
         type: String,

@@ -1,0 +1,34 @@
+import { Document } from 'mongoose';
+import { Role, TaskVoxModel } from '../enums/user-enums';
+/**
+ * IUser: UserDocument का टाइप सेफ़ इंटरफ़ेस
+ * इसमें वही प्रॉपर्टीज़ होंगी जो आपका UserSchema में हैं,
+ * साथ में timestamps (createdAt, updatedAt) भी जोड़ते हैं।
+ */
+export interface IUser extends Document {
+    name: string;
+    email: string;
+    password: string;
+    companyName: string;
+    role: Role;
+    tenantID: string;
+    defaultModel: TaskVoxModel;
+    refreshToken: string | null;
+    /**
+     * Optional: List of additional emails to be notified (campaign completion, updates, etc.)
+     */
+    additionalEmails: string[];
+    overrideClientCutoff: boolean;
+    clientCutoffStart: string;
+    clientCutoffEnd: string;
+    /** Payment / subscription fields */
+    customerId: string | null;
+    subscriptionId: string | null;
+    priceId: string | null;
+    planId: string | null;
+    hasAccess: boolean;
+    isWalletActivated: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+}
+//# sourceMappingURL=user.interface.d.ts.map
